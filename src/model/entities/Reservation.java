@@ -11,7 +11,7 @@ public class Reservation {
     private Date checkIn;
     private Date checkOut;
 
-    private static SimpleDateFormat pattern = new SimpleDateFormat("dd/MM/yyyy");
+    private static final SimpleDateFormat pattern = new SimpleDateFormat("dd/MM/yyyy");
 
     public Reservation(Integer roomNumber, Date checkIn, Date checkOut) throws DomainException{
         if (!checkOut.after(checkIn)) {
