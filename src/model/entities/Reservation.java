@@ -44,6 +44,7 @@ public class Reservation {
     }
 
     public void updateDates(Date checkIn, Date checkOut) throws DomainException{
+
         Date now = new Date();
         if (checkIn.before(now) || checkOut.before(now)) {
             throw new DomainException("Reservation dates for update must be future dates");
